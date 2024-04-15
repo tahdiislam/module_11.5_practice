@@ -1,0 +1,24 @@
+<!-- @format -->
+
+{% extends 'base.html'%} {% block content %}
+<h1 class="py-4 ">List of all foods</h1>
+
+<div class="row">
+  {% for food in meals %}
+  <div class="card col-3" >
+    <img
+      src="{{food.strMealThumb}}"
+      class="card-img-top"
+      alt="{{food.strMeal}}"
+    />
+    <div class="card-body">
+      <h4>{{food.strMeal}}</h4>
+      <p class="card-text">
+        It's no secret that Italian cuisine consists of some of the tastiest and most popular dishes around. While pizza, pasta, and risotto variations abound outside of Italy, other items found more regionally are less known.
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
